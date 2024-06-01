@@ -10,7 +10,6 @@ public class Goal {
 
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
-
         private int goalId;
 
         private int userId;
@@ -26,7 +25,9 @@ public class Goal {
         @NonNull
         private String status;
 
+        public Goal(){
 
+        }
         public Goal(int goalId, int userId, @NonNull String title, String details, @NonNull Date targetDate, @NonNull String status) {
             this.goalId = goalId;
             this.userId = userId;

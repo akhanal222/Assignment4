@@ -10,8 +10,8 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int taskId;
 
-    @ManyToMany
-    @JoinTable(name = " GoalId")
+    @ManyToOne
+    @JoinColumn(name = "GoalId")
     private Goal goalId;
 
     @NonNull

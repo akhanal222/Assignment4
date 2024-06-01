@@ -7,7 +7,7 @@ import java.util.List;
 
     @Repository
     public interface GoalRepository extends JpaRepository< Goal, Integer> {
-        @Query(value = "..",nativeQuery = true)
+        @Query(value = "SELECT g FROM Goal g WHERE g.userId = :userId" ,nativeQuery = true)
        public List<Goal> getbyuserId(int userId);
     }
 
